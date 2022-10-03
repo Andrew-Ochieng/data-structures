@@ -31,28 +31,29 @@ const newTransaction = document.getElementById('new-transaction')
 
 
 const showTransactions = data.map((item) => {
-    // return transact[0]
-    // console.log(transact.description)
+    // distructure items
+    const {date, description, category, amount} = item
+
     transactions.innerHTML = `
         <div>
-            <h3>${item.date}</h3>
-            <p>${item.description}</p>
-            <h4>${item.category}</h4>
-            <p>${item.amount}</p>
+            <h3>${date}</h3>
+            <p>${description}</p>
+            <h4>${category}</h4>
+            <p>${amount}</p>
         </div>
     `
 })
 
-const eachTransaction = data.forEach((newItem) => {
-    newTransaction.innerHTML = `
-        <div>
-            <h3>${newItem.date}</h3>
-            <p>${newItem.description}</p>
-            <h4>${newItem.category}</h4>
-            <p>${newItem.amount}</p>
-        </div>
-    `
-}) 
+// const eachTransaction = data.forEach((newItem) => {
+//     newTransaction.innerHTML = `
+//         <div>
+//             <h3>${newItem.date}</h3>
+//             <p>${newItem.description}</p>
+//             <h4>${newItem.category}</h4>
+//             <p>${newItem.amount}</p>
+//         </div>
+//     `
+// }) 
 
 
 
